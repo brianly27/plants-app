@@ -1,0 +1,5 @@
+<h1><%= @room.user.name %>'s <%=@room.name %> </h1>
+<% @room.windows.each_with_index do |window, i | %>
+    <%= link_to "Window #{i+1}", window_path(window) %>
+<% end %>
+

@@ -1,0 +1,10 @@
+<h1><%= @window.room.name %> Window </h1>
+    <p> Window Direction: <%= @window.facing_direction %> </p>
+    <p> Light Intensity: <%= @window.light_intensity %> </p>
+
+
+<% @window.plants.each do |plant| %>
+    <%= link_to plant.name, plant_path(plant) %>
+<% end %>
+
+
