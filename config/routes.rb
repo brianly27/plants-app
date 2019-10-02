@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   resources :rooms, except: :index  
   resources :windows, except: :index
   resources :plants, only: [:show, :index]
+  get '/login', to: "auth#login", as: "login"
+  post '/login', to: "auth#verify"
+  root 'auth#login'
 
 
 

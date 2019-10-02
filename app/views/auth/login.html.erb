@@ -1,10 +1,10 @@
-<h1> Signup Page </h1>
-
+<h1> Log into your account </h1>
 <%= flash[:message] %>
+
 <%= form_with model: @user do |f| %>
     <%= f.label :name %>
     <%= f.text_field :name %><br>
     <%= f.label :user_name %>
     <%= f.text_field :user_name %><br>
-    <%= f.submit %>
+    <%= f.submit "Login"%>
 <% end %>

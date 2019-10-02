@@ -10,6 +10,6 @@ Window.create(room_id: 1, facing_direction: "south", light_intensity: "high")
 Plant.create(name:"Fiddle Leaf Fig")  
 PlantsWindow.create(window_id: 1, plant_id: 1)
 
-brian = User.first
-brian.rooms.first.windows.first.plants.first.name
+# brian = User.first
+# brian.rooms.first.windows.first.plants.first.name
 

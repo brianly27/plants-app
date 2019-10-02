@@ -1,4 +1,5 @@
 class PlantsController < ApplicationController
+    before_action :check_auth
 
     def index 
         @plants = Plant.all
