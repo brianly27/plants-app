@@ -1,0 +1,13 @@
+<h1> Create a New Window </h1>
+
+<%= flash[:message] %>
+
+<%= form_with model: @window do |f| %>
+    <%= f.collection_select :room_id, @rooms, :id, :name %><br>
+    <%= f.label "Window Direction" %>
+    <%= f.text_field :facing_direction %><br>
+    <%= f.label "Light Intensity" %>
+    <%= f.text_field :light_intensity %><br>
+    <%= f.submit "Create Window" %>
+
+<% end %>

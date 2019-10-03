@@ -1,0 +1,8 @@
+<h1> Add a Plant to Your Window </h1>
+
+<%= form_with model: @plants_window do |f| %>
+    <%= f.label "Select a plant"%><br>
+    <%= f.collection_select :plant_id, @plants, :id, :name %><br>
+    <%= f.submit "Add Plant"%>
+<% end %>
+

@@ -9,5 +9,4 @@ class PlantsController < ApplicationController
         @plant = Plant.find(params[:id])
     end
 
-
 end

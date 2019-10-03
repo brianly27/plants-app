@@ -10,23 +10,26 @@ class RoomsController < ApplicationController
     end
 
     def create 
-        byebug
-        @room = Room.new(set_params)
+        # byebug
+        @room = Room.new(set_params(:name))
+        @room.user_id = session[:user_id]
+        
         if @room.save
-            #should save to specific user
-            # user = User.find(session[:user_id])
-            # user.rooms << @room
             redirect_to room_path(@room)
         else
             render :new
         end
+    end
 
+    def destroy 
+        Room.find(params[:id]).destroy
+        redirect_to user_path(session[:user_id])
     end
 
     private 
 
-    def set_params
-        params.require(:room).permit(:name)
+    def set_params(*args)
+        params.require(:room).permit(*args)
     end
 
 
