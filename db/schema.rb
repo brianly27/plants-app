@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_03_221938) do
+ActiveRecord::Schema.define(version: 2019_10_04_174928) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,18 @@ ActiveRecord::Schema.define(version: 2019_10_03_221938) do
     t.float "price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "common_name"
+    t.string "active_growth_period"
+    t.string "flower_color"
+    t.string "growth_rate"
+    t.float "height_when_mature"
+    t.string "lifespan"
+    t.string "shape_and_orientation"
+    t.float "minimum_precipitation"
+    t.float "maximum_precipitation"
+    t.float "maximum_root_depth"
+    t.string "shade_tolerance"
+    t.float "minimum_temperature"
   end
 
   create_table "plants_windows", id: false, force: :cascade do |t|
