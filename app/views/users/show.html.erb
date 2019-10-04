@@ -1,4 +1,4 @@
-<h1><%= @user.name%>'s Rooms</h1>
+<%= link_to "Logout", logout_path, {class: 'item'} %> <%= link_to "Edit Account Info", edit_user_path(session[:user_id]) %> <h1><%= @user.name%>'s Rooms</h1>
 
 
 <% @user.rooms.each do |room| %>

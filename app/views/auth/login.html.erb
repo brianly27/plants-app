@@ -1,10 +1,12 @@
 <h1> Log into your account </h1>
 <%= flash[:message] %>
 
-<%= form_with model: @user do |f| %>
+<%= form_with url: login_path do |f| %>
     <%= f.label :name %>
     <%= f.text_field :name %><br>
-    <%= f.label :user_name %>
-    <%= f.text_field :user_name %><br>
+    <%= f.label :password %>
+    <%= f.password_field :password %><br>
     <%= f.submit "Login"%>
-<% end %>
+<% end %><br>
+
+<%= link_to "Create New Account", new_user_path, {class: 'item'} %>
